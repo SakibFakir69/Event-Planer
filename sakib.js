@@ -13,7 +13,7 @@
 // import { TextPlugin } from "gsap/TextPlugin";
 
 $(document).ready(function () {
-  
+
   console.log("loaded");
 
 
@@ -37,7 +37,7 @@ $(document).ready(function () {
       prevEl: '.swiper-button-prev',
     },
 
- 
+
   });
 
 
@@ -110,6 +110,31 @@ $(document).ready(function () {
     })
 
   })
+
+  // mouse 
+const mouse = document.getElementById("mouse");
+
+document.body.addEventListener("mousemove", (e) => {
+  const { clientX, clientY } = e;
+
+  // Animate the mouse div smoothly
+  gsap.to(mouse, {
+    duration: 0.3,
+    x: clientX,
+    y: clientY,
+    ease: "power2.out",
+    
+  });
+
+  // Optional: Animate size/opacity
+  gsap.to(mouse, {
+    duration: 0.5,
+    width: 50,
+    height: 50,
+    opacity: 1,
+    ease: "power2.out"
+  });
+});
 
 
 
