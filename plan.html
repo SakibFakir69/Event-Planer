@@ -14,42 +14,128 @@
         @media (max-width:768px) {
             .box {
                 padding: 10px;
+
             }
 
         }
-        input , #text-area{
+
+        input,
+        #text-area {
             height: 40px;
             width: 400px;
         }
-        button{
+
+        button {
             height: 40px;
             width: 200px;
 
         }
-        form{
+
+        form {
             display: flex;
             justify-content: center;
             justify-items: center;
             padding: 10px;
-            
+
             gap: 10px;
         }
+
         @media (max-width:779px) {
-            form{
+            form {
                 padding: 10px;
                 display: grid;
                 grid-template-columns: auto;
                 padding: 10px;
 
             }
-            
+
+        }
+
+        .title {
+            text-align: center;
+            font-size: 40px;
+        }
+
+        #calendar {
+            max-width: 100%;
+
+            margin: 0 auto;
+
+            font-size: 14px;
+
+        }
+
+        @media (max-width: 768px) {
+            #calendar {
+                font-size: 12px;
+
+            }
+
+            .fc-next-button {
+                height: 40px;
+                width: 120px;
+            }
+
+            .fc-prev-button {
+                height: 40px;
+                width: 120px;
+
+            }
+
+            .fc-header-toolbar {
+                display: flex;
+                justify-content: space-between;
+                /* spreads left + center + right */
+                align-items: center;
+                gap: 20px;
+            }
+
+            .fc-today-button {
+                height: 40px;
+                width: 120px;
+                padding-left: 10px;
+
+            }
+            #button-section{
+                display: flex;
+                gap: 10px;
+                
+            }
+
+        }
+
+        #week{
+            background-color: green;
+            color: white;
+            border-radius: 4px;
+            border: none;
+        }
+           #year{
+            background-color: rgb(175, 186, 15);
+            color: white;
+            border-radius: 4px;
+            border: none;
+        }
+           #month{
+            background-color: rgb(19, 136, 238);
+            color: white;
+            border-radius: 4px;
+            border: none;
+        }
+        #add{
+            background-color: tomato;
+            border: none;
+            border-radius: 4px;
+            font-size: 20px;
+            color:white
         }
     </style>
 </head>
 
 <body>
     <div>
-        <h1>manage Your task</h1>
+        <a href="./index.html">Back to Home</a>
+        <h1 class="title">Add your Daily task</h1>
     </div>
 
     <section class="box">
@@ -59,16 +145,30 @@
                 <input id="title" type="text" placeholder="Enter Your title" />
 
                 <textarea id="text-area" placeholder="Enter your description"></textarea>
-                <input id="date-picker" type="date"/>
+                <input id="date-picker" type="date" />
+                <input id="date-picker-end" type="date" />
 
                 <button type="submit" id="add">Add + </button>
             </form>
         </div>
-        <div class="" style="height: 60px;">
 
-        </div>
-        <div id='calendar'></div>
+        <section id="button-section" style="margin-bottom: 80px;">
+
+            <button id="year">Year</button>
+            <button id="month"> Month</button>
+            <button id="week">Week</button>
+
+        </section>
+        <section>
+
+            <div id='calendar'></div>
+        </section>
+
+
+
+
     </section>
+
 
 
     <script src="
