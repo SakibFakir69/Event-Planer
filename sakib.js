@@ -104,6 +104,7 @@ $(document).ready(function () {
 
         pin: true,
         scrub: true,
+        
 
       }
 
