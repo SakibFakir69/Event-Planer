@@ -6,6 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.19/index.global.min.js'></script>
     <title>Document</title>
+    <style>
+        .box {
+            padding: 40px;
+        }
+
+        @media (max-width:768px) {
+            .box {
+                padding: 10px;
+            }
+
+        }
+        input , #text-area{
+            height: 40px;
+            width: 400px;
+        }
+        button{
+            height: 40px;
+            width: 200px;
+
+        }
+        form{
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            padding: 10px;
+            
+            gap: 10px;
+        }
+        @media (max-width:779px) {
+            form{
+                padding: 10px;
+                display: grid;
+                grid-template-columns: auto;
+                padding: 10px;
+
+            }
+            
+        }
+    </style>
 </head>
 
 <body>
@@ -13,10 +52,28 @@
         <h1>manage Your task</h1>
     </div>
 
-    <div id='calendar'></div>
+    <section class="box">
+        <div class="form">
+
+            <form id="">
+                <input id="title" type="text" placeholder="Enter Your title" />
+
+                <textarea id="text-area" placeholder="Enter your description"></textarea>
+                <input id="date-picker" type="date"/>
+
+                <button type="submit" id="add">Add + </button>
+            </form>
+        </div>
+        <div class="" style="height: 60px;">
+
+        </div>
+        <div id='calendar'></div>
+    </section>
 
 
-
+    <script src="
+https://cdn.jsdelivr.net/npm/@fullcalendar/interaction@6.1.19/index.global.min.js
+"></script>
     <script src="./plan.js"></script>
 </body>
 
