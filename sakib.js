@@ -81,7 +81,7 @@ $(document).ready(function () {
       start: "top cennter",
       end: "bottom center",
       scrub: true,
-      markers: true,
+    
 
     }
 
