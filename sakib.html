@@ -13,6 +13,13 @@
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.19/index.global.min.js'></script>
 
     <title>Event planer</title>
+
+
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+    </style>
 </head>
 
 <body class="p-2 ">
@@ -20,7 +27,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary bg-black rounded">
             <div class="container-fluid">
-                <a class="navbar-brand " href="#" >Event Planner</a>
+                <a class="navbar-brand " href="#">Event Planner</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -53,7 +60,7 @@
                             <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                         </li>
                     </ul>
-                    
+
                     <div>
                         <button class="btn btn-danger">Log in</button>
                     </div>
@@ -64,21 +71,118 @@
     </header>
 
     <!-- main  -->
-     <!-- use gsap  -->
-      <div class="h-[230px]">
+    <!-- use gsap  -->
+    <div class="h-[230px]">
 
-      </div>
+    </div>
 
     <main class="w-100">
         <div class="mt-5 align-items-center">
-            <p class="fs-2 fw-bold  text-center">✨ Plan Your Events, Stress-Free</p>
 
-            <p  class="w-75 text-center mx-auto">Easily organize, manage, and track all your events in one place. From birthdays and weddings to corporate meetings and workshops, our event planner ensures every detail is taken care of. Set reminders, create <span class="bg-secondary  text-white  " style="height: 2px; border: 2px; padding: 2px;">schedules</span>, assign <span class="bg-dark text-white " style="height: 2px; padding: 2px; border-radius: 2px;">tasks</span>, and monitor progress with ease. Never miss a moment — focus on enjoying your events while we help you stay organized, on time, and stress-free.</p>
+            <p id="text-head" class="fs-2 fw-bold  text-center"></p>
 
-            <div class="row align-items-center justify-content-center">
-                <img src="./pexels-coralbellestudios-811572.jpg" class="img-thumbnail "  style="height: 600px; width: 80%;"/>
+            <p id="text-description" class="w-75 text-center mx-auto">Easily organize, manage, and track all your events
+                in one place. From birthdays and weddings to corporate meetings and workshops, our event planner ensures
+                every detail is taken care of. Set reminders, create <span class="bg-secondary  text-white  "
+                    style="height: 2px; border: 2px; padding: 2px;">schedules</span>, assign <span
+                    class="bg-dark text-white " style="height: 2px; padding: 2px; border-radius: 2px;">tasks</span>, and
+                monitor progress with ease. Never miss a moment — focus on enjoying your events while we help you stay
+                organized, on time, and stress-free.</p>
+
+            <div id="head-img" class="row align-items-center justify-content-center py-4">
+                <img src="./asset/pexels-coralbellestudios-811572.jpg" class="img-thumbnail "
+                    style="height: 600px; width: 80%;" />
             </div>
         </div>
+
+
+        <!-- why chose our services -->
+
+
+        <section class="py-12 bg-gray-50">
+            <div class="max-w-6xl mx-auto px-4">
+
+                <h2 class="text-3xl font-bold text-center mb-10">Why Choose Our <span
+                        class="bg-dark text-white p-1 rounded "> Services</span> </h2>
+
+                <!-- 4 box -->
+                <div id="card-box" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 g-4 position-relative">
+
+                    <!-- Card 1 -->
+                    <div class="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition mb-4 align-items-center mx-auto d-flex p-3 "
+
+                        style="height: 480px;">
+
+
+                        <img src="./asset/pexels-polina-tankilevitch-4440781.jpg" alt="Fast Delivery"
+                            class="img-fluid d-block mx-auto" style="height: 400px; ">
+
+                        <div class="p-3">
+                            <h3 class="text-xl font-semibold mb-2">Fast Delivery</h3>
+                            <p class="text-gray-600">
+                                Get your products delivered quickly and securely to your doorstep.
+                                We work with trusted logistics partners to ensure your orders arrive
+                                on time, every time, without compromising on safety or quality.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition mb-4 align-items-center mx-auto d-flex p-3"
+                        style="height: 480px;">
+
+                        <img src="./asset/pexels-mart-production-7709089.jpg" alt="24/7 Support"
+                            class="img-fluid d-block mx-auto" style="height: 400px; ">
+                             
+
+                        <div class="p-3">
+                            <h3 class="text-xl font-semibold mb-2 ">24/7 Support</h3>
+                            <p class="text-gray-600 ">
+                                Our customer support team is available around the clock to answer
+                                your questions, solve issues, and provide guidance. Whether it's day
+                                or night, you can count on us to be there when you need us most.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition mb-4 align-items-center mx-auto d-flex p-3" style="height: 480px;">
+                        <img src="./asset/pexels-adriana-beckova-1584864721-33008582.jpg" alt="Affordable Pricing"
+                                 class="img-fluid d-block mx-auto" style="height: 400px; ">
+
+                       
+                            <div class="p-3">
+                                 <h3 class="text-xl font-semibold mb-2 ">Affordable Pricing</h3>
+                        <p class="text-gray-600">
+                            We believe high-quality services should be accessible to everyone.
+                            That’s why we offer transparent and competitive pricing, giving you
+                            maximum value without hidden fees or unexpected costs.
+                        </p>
+                            </div>
+
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition mb-4 align-items-center mx-auto d-flex p-3" style="height: 480px;">
+
+                        <img src="./asset//pexels-ketut-subiyanto-4963433.jpg" alt="Trusted by Clients"
+                              class="img-fluid d-block mx-auto" style="height: 400px; ">
+
+                       <div class="p-3">
+                         <h3 class="text-xl font-semibold mb-2 ">Trusted by Clients</h3>
+                        <p class="text-gray-600 ">
+                            Thousands of satisfied customers rely on us because of our consistent
+                            performance, reliability, and dedication. Your trust drives us to
+                            continuously improve and deliver services that exceed expectations.
+                        </p>
+                       </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
 
 
 
