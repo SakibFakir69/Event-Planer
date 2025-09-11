@@ -25,7 +25,7 @@ const randomColor = () => {
     return color[index];
 }
 
-// user can add task , remove , edit 
+// user can add task , remove 
 
 
 // setValue
