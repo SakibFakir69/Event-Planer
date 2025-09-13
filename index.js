@@ -6,13 +6,7 @@
 $(document).ready(function () {
 
   console.log("loaded");
-  const myModal = document.getElementById('myModal')
-const myInput = document.getElementById('myInput')
-
-myModal.addEventListener('shown.bs.modal', () => {
-  myInput.focus()
-})
-
+ 
 
 
   // img slider 
