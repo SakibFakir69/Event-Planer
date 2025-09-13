@@ -55,16 +55,23 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            justify-items: center;
             gap: 10px;
         }
 
         @media (max-width:768px) {
             form {
                 flex-direction: column;
-                align-items: stretch;
+                align-items: center;
                 padding: 8px;
-                margin-right: 15px;
+                justify-content: center;
+                justify-items: center;
+                margin-right: 25px;
+              
             }
+               #text-area{
+                margin-left: 10px;
+               }
         }
 
         .title {
@@ -87,20 +94,22 @@
             .fc-header-toolbar {
                 display: flex;
                 flex-direction: column;
-                gap: 10px;
-                align-items: center;
-                justify-items: center;
+                gap: 4px;
+            
             }
 
             .fc-button {
                 font-size: 12px !important;
                 padding: 10px 10px !important;
-                height: 40px;
-                width: 120px;
+                height: 40px !important;
+                width: 80px !important;
             }
 
-            .fc-today-button{
+            .fc-today-button {
                 font-size: 15px;
+                height: 40px;
+                width: 80px;
+
             }
 
 
@@ -114,6 +123,10 @@
 
             height: 40px;
             width: 120px;
+        }
+
+        .fc-today-button {
+            font-size: 15px;
         }
 
         #week {
@@ -147,7 +160,7 @@
 
         #button-section {
             display: flex;
-            flex-wrap: wrap;
+           
             gap: 10px;
             justify-content: center;
             margin-bottom: 40px;
