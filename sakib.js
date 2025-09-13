@@ -72,17 +72,14 @@ $(document).ready(function () {
 
   gsap.to("#head-img", {
 
-    x: window.innerWidth,
+    opacity:1,
+
     duration: 4,
     ease: "power1.inOut",
-    scale: 0.8,
-    scrollTrigger: {
-      trigger: "#head-text",
-      start: "top cennter",
-      end: "bottom center",
-      scrub: true,
-    
-
+    scale: 0.9,
+    scrollTrigger:{
+      trigger:"#head-img",
+      scrub:true
     }
 
   })
