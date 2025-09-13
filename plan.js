@@ -1,7 +1,11 @@
 
 
 
-const fromValue = () => {
+
+
+
+// ssot single source of trust
+export const fromValue = () => {
     const title = document.getElementById("title").value
     const textArea = document.getElementById("text-area").value;
     const datePicker = document.getElementById("date-picker").value;
@@ -11,14 +15,14 @@ const fromValue = () => {
 
 }
 
-const randomID = () => {
+export const randomID = () => {
 
     const id = Math.floor(Math.random() * 100000);
     return id;
 }
 
 
-const randomColor = () => {
+export const randomColor = () => {
     const color = ['red', 'green', 'black'];
     const index = Math.floor(Math.random() * color.length);
 
@@ -30,12 +34,14 @@ const randomColor = () => {
 
 // setValue
 
-const setValue = (value = "dayGridMonth") => {
+export const setValue = (value = "dayGridMonth") => {
 
     return value;
 
 
 }
+
+
 
 
 
@@ -75,11 +81,13 @@ document.addEventListener("DOMContentLoaded", () => {
             deleteBtn.style.width = "40px"
 
             deleteBtn.addEventListener("click", (e) => {
+
                 e.stopPropagation();
                 info.event.remove();
 
             })
             console.log(info)
+
             info.el.style.height = '60px';
             info.el.style.display = 'flex justifiy-content:between'
             info.el.style.fontSize = "18px"
@@ -90,13 +98,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
+
+
+
         },
 
 
         dateClick: function (info) {
-            console.log(info)
-            alert('A day has been clicked!');
+            const dateInfo = taskDB.filter((item) => item.date === info.dateStr);
+
+            if (dateInfo.length === 0) return;
+
+            const { title, description } = dateInfo[0];
+
+            document.getElementById('modalTitle').textContent = `Title :`+ title;
+            document.getElementById('modalBody').textContent = `Description : ` + description;
+
+            const modalEl = document.getElementById('taskModal');
+            const modal = new bootstrap.Modal(modalEl);
+            modal.show();
         }
+
     });
 
     calendar.render();
@@ -125,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!title || !textArea || !datePicker || !datePickerEnd) {
             alert("Please Enter your event full info");
             return;
-        } 
+        }
 
         const task = {
 

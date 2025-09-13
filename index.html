@@ -27,21 +27,43 @@
             font-family: 'Noto Sans', sans-serif;
 
         }
-        .swiper-button-prev{
-         
-            margin-left: 20px;
-        }
-        .swiper-button-next{
+
+        .swiper-button-prev::after{
+
+             font-size: 20px !important;
+             margin-left:20px;
             
-           
+
+        }
+
+        .swiper-button-next::after {
+            font-size: 20px !important;
             margin-right: 20px;
+        }
+
+        @media (min-width:768px) {
+            
+        .swiper-button-prev::after{
+
+             font-size: 30px !important;
+             margin-left: 20px;
+            
+
+        }
+      
+        .swiper-button-next::after {
+            font-size: 30px !important;
+            margin-right: 20px;
+        }
+
+            
         }
     </style>
 </head>
 
-<body class=" ">
+<body class=" " style="height: 100vh">
 
-    <div id="mouse" class="border position-absolute bg-danger z-3 rounded opacity-25"> </div>
+
 
     <header class="position-fixed top-0 start-0 z-3 w-100 ">
         <nav class="navbar navbar-dark bg-dark navbar-expand-lg rounded border">
@@ -339,7 +361,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
-    <script src="./landing.js"></script>
+    <script src="./index.js"></script>
 
 </body>
 

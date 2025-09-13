@@ -1,20 +1,17 @@
 
-// // use dry , ssot , oop 
-// import { gsap } from "gsap";
 
 
 
-// import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// // ScrollSmoother requires ScrollTrigger
-// import { ScrollSmoother } from "gsap/ScrollSmoother";
-// import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-// import { SplitText } from "gsap/SplitText";
-// import { TextPlugin } from "gsap/TextPlugin";
 
 $(document).ready(function () {
 
   console.log("loaded");
+  const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
 
 
 
@@ -72,14 +69,14 @@ $(document).ready(function () {
 
   gsap.to("#head-img", {
 
-    opacity:1,
+    opacity: 1,
 
     duration: 4,
     ease: "power1.inOut",
     scale: 0.8,
-    scrollTrigger:{
-      trigger:"#head-img",
-      scrub:true
+    scrollTrigger: {
+      trigger: "#head-img",
+      scrub: true
     }
 
   })
@@ -101,7 +98,7 @@ $(document).ready(function () {
 
         pin: true,
         scrub: true,
-        
+
 
       }
 
@@ -109,30 +106,9 @@ $(document).ready(function () {
 
   })
 
-  // mouse 
-const mouse = document.getElementById("mouse");
+  // mouse  removed   
 
-document.body.addEventListener("mousemove", (e) => {
-  const { clientX, clientY } = e;
 
-  // Animate the mouse div smoothly
-  gsap.to(mouse, {
-    duration: 0.3,
-    x: clientX,
-    y: clientY,
-    ease: "power2.out",
-    
-  });
-
-  // Optional: Animate size/opacity
-  gsap.to(mouse, {
-    duration: 0.5,
-    width: 50,
-    height: 50,
-    opacity: 1,
-    ease: "power2.out"
-  });
-});
 
 
 
