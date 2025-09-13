@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if(!title  || !textArea  || !datePicker || !datePickerEnd)
         {
-            alert("Please Enter your full info");
+            alert("Please Enter your event full info");
             return;
         }
 
