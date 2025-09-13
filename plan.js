@@ -5,9 +5,9 @@ const fromValue = () => {
     const title = document.getElementById("title").value
     const textArea = document.getElementById("text-area").value;
     const datePicker = document.getElementById("date-picker").value;
-      const datePickerEnd = document.getElementById("date-picker-end").value
+    const datePickerEnd = document.getElementById("date-picker-end").value
 
-    return { title, textArea, datePicker ,datePickerEnd};
+    return { title, textArea, datePicker, datePickerEnd };
 
 }
 
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // change calander
     document.getElementById("year").addEventListener("click", () => {
-        calendar.changeView("dayGridYear"); 
+        calendar.changeView("dayGridYear");
     });
 
     document.getElementById("month").addEventListener("click", () => {
@@ -120,13 +120,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const btn = document.getElementById("add");
     btn.addEventListener("click", (e) => {
         e.preventDefault();
-        const { title, textArea, datePicker ,datePickerEnd} = fromValue();
+        const { title, textArea, datePicker, datePickerEnd } = fromValue();
 
-        if(!title  || !textArea  || !datePicker || !datePickerEnd)
-        {
+        if (!title || !textArea || !datePicker || !datePickerEnd) {
             alert("Please Enter your event full info");
             return;
-        }
+        } 
 
         const task = {
 
@@ -135,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
             date: datePicker,
             id: randomID(),
             color: randomColor(),
-            end:datePickerEnd,
+            end: datePickerEnd,
         };
 
         taskDB.push(task);
@@ -149,6 +148,12 @@ document.addEventListener("DOMContentLoaded", () => {
             color: task.color,
             end: task.end,
         });
+
+        //   remove value after add click
+        document.getElementById("title").value = "";
+        document.getElementById("text-area").value = "";
+        document.getElementById("date-picker").value = "";
+        document.getElementById("date-picker-end").value = "";
 
     });
 });
