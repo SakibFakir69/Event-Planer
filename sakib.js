@@ -76,7 +76,7 @@ $(document).ready(function () {
 
     duration: 4,
     ease: "power1.inOut",
-    scale: 0.9,
+    scale: 0.8,
     scrollTrigger:{
       trigger:"#head-img",
       scrub:true
