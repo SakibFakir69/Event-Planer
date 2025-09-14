@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const { title, description } = dateInfo[0];
 
-            document.getElementById('modalTitle').textContent = `Title :`+ title;
+            document.getElementById('modalTitle').textContent = `Title :` + title;
             document.getElementById('modalBody').textContent = `Description : ` + description;
 
             const modalEl = document.getElementById('taskModal');
@@ -177,6 +177,14 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("text-area").value = "";
         document.getElementById("date-picker").value = "";
         document.getElementById("date-picker-end").value = "";
+        
+        // hide modal
+        const modalElement = document.getElementById('exampleModal');
+        bootstrap.Modal.getInstance(modalElement).hide();
+        
+      
+
+
 
     });
 });
